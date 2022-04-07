@@ -1,0 +1,16 @@
+######################################################################### Command ###################################################################
+
+# Compile documento.tex (Run  a  file  previewer  and  
+  continually  update the .dvi, .ps, and/or .pdf files 
+  whenever changes are made to source files -pvc), 
+  (Generate pdf version of document -pdf)                                 sudo latexmk -pdf -pvc documento.tex
+                                        
+              
+              
+              
+
+######################## Warning #############################
+
+# If Zathura pdf lector dosent work, try reading the specified            sudo latexmk -pdf -pvc -r /home/"username"/.config/latexmk/latexmkrc "file".tex
+  initialization file ("RC file") before processing 
+  (-r /home/"username"/.config/latexmk/latexmkrc
