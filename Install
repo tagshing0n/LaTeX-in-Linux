@@ -1,0 +1,30 @@
+###################################################################################### Command #########################################################
+
+# Update the system                                                                    sudo apt-get update
+
+# Install LaTeX pack (add --fix-missing if you are dependence problems)                sudo apt-get install texlive-full -y --fix-missing
+
+# Install latexmk and Zathura                                                          sudo apt-get install latexmk zathura -y
+
+# See what is the mime associate of pdf                                                sudo xdg-mime query default application/pdf
+
+# Change mime type for pdf                                                             sudo xdg-mime default zathura.desktop application/pdf
+
+# Make directory latexmk into .config                                                  sudo /home/"username"/.config/latexmk
+
+# Create configuration file name latexmkrc for configure Zathura pdf lector            sudo touch /home/"username"/.config/latexmk/latexmkrc
+
+# Use nano por latexmkrc and write                                                     sudo nano /home/"username"/.config/latexmk/latexmkrc
+
+                                                                                       $pdf_previewer = 'zathura';
+
+# Change permissions and group with recursion                                          sudo chown "username":"username" -R latexmk   
+
+# Log in root                                                                          sudo su
+
+# Make latexmk directory into root                                                     mkdir /root/.config/latexmk 
+
+# Link simbolic with root (remove existing destination files -f),                     
+  (make symbolic links instead of hard links -s)                                       ln -s -f /home/"username"/.config/latexmk/latexmkrc latexmkrc
+  
+  
